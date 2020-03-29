@@ -44,9 +44,9 @@ open class DDDViewController: UIViewController {
 	public convenience init(within viewController: UIViewController) {
 		self.init()
 		viewController.view.addSubview(view)
-		viewController.view.sendSubview(toBack: view)
-		viewController.addChildViewController(self)
-		didMove(toParentViewController: viewController)
+        viewController.view.sendSubviewToBack(view)
+        viewController.addChild(self)
+        didMove(toParent: viewController)
 	}
 
     required public init(coder aDecoder: NSCoder) {

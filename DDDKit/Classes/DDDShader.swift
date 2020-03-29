@@ -78,7 +78,7 @@ public class DDDShader: DDDObject {
 			print("OpenGLView compileShader():  glCompileShader() failed:  \(String(cString: infoLog))")
 			print("Shader is \(String(code))")
 
-			infoLog.deallocate(capacity: 256)
+			infoLog.deallocate()
 			throw DDDError.shaderFailedToCompile
 		}
 	}

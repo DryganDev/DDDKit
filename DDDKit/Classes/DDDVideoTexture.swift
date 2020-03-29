@@ -56,7 +56,7 @@ public class DDDVideoTexture: DDDVideoBufferTexture {
 			videoItem.outputs.flatMap({ return $0 as? AVPlayerItemVideoOutput }).forEach {
 				videoItem.remove($0)
 			}
-			if videoItem.status != AVPlayerItemStatus.readyToPlay {
+            if videoItem.status != .readyToPlay {
 				// see https://forums.developer.apple.com/thread/27589#128476
 				return nil
 			}

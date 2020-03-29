@@ -61,7 +61,7 @@ open class DDD360VideoViewController: DDDViewController {
 					self.player?.play()
                     
                     NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: self.playerItem!, queue: .main) { [weak self] _ in
-                        self?.player?.seek(to: kCMTimeZero)
+                        self?.player?.seek(to: .zero)
                         self?.player?.play()
                     }
 				}
